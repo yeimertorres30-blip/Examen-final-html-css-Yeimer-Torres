@@ -12,13 +12,6 @@ body {
     text-align: center;
 }
 
-main{
-    flex: 1;
-    margin-top: 180px;
-}
-h2{
-    margin: 2rem;
-}
 header {
     display: flex;
     flex-direction: column;
@@ -28,10 +21,17 @@ header {
     background-size: cover;
     text-align: center;
     animation: animation1 1s ease-in-out infinite;
-    position: fixed;
-    top: 0;
     width: 100%;
-    z-index: 1000;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+
+nav {
+    border: 2px solid black;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
 }
 
 @keyframes animation1 {
@@ -62,7 +62,7 @@ header {
 }
 
 .encabezado {
-    padding: auto;
+    padding: 0;
     text-align: center;
     border: 2px solid #000000;
 }
@@ -70,7 +70,9 @@ header {
 h1 {
     display: flex;
     align-items: center;
-    gap: 10px;
+    /* gap: 10px; */
+    margin: 0;
+    padding: 10px 0;
 }
 
 .color {
@@ -79,20 +81,15 @@ h1 {
 }
 
 .navegacion {
-    display: flex;
     background-color: lightgreen;
-    flex-direction: column;
-    align-items: stretch;
     color: black;
     text-decoration: none;
     text-align: center;
-     position: fixed;
-    top: 104px;
     width: 100%;
-    z-index: 999;
 }
 
 .enlace {
+    display: block;
     text-decoration: none;
     color: black;
     font-size: 1.2rem;
@@ -198,20 +195,78 @@ h1 {
     color: white;
     transform: scale(1.03);
 }
+
+input[name="filtro"] {
+    display:inline-block;
+    display: none;
+    margin-right:5px;
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.filtros label {
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#todos:checked~.catalogo .producto {
+    display: flex;
+}
+
+#botellas:checked~.catalogo .producto,
+#bolsas:checked~.catalogo .producto,
+#cubiertos:checked~.catalogo .producto,
+#bucal:checked~.catalogo .producto,
+#kits:checked~.catalogo .producto {
+    display: none;
+}
+
+#botellas:checked~.catalogo .botella {
+    display: flex;
+}
+
+#bolsas:checked~.catalogo .bolsa {
+    display: flex;
+}
+
+#cubiertos:checked~.catalogo .cubierto {
+    display: flex;
+}
+
+#bucal:checked~.catalogo .bucal {
+    display: flex;
+}
+
+#kits:checked~.catalogo .kit {
+    display: flex;
+}
+
 .catalogo {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     margin: 40px;
+    align-items: stretch;
 }
 
 .producto {
     width: 300px;
+    min-height: 650px;
     background: white;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     transition: transform 0.3s ease;
 }
@@ -221,7 +276,9 @@ h1 {
 }
 
 .producto img {
-    width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
     border-radius: 15px;
 }
 
@@ -267,9 +324,17 @@ h1 {
     color: white;
 }
 
+.producto input[type="number"] {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
 footer {
     text-align: center;
     padding: 20px;
     background-color: lightgreen;
     margin-top: 20px;
 }
+
