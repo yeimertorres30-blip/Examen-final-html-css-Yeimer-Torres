@@ -34,6 +34,11 @@ nav {
     z-index: 9999;
 }
 
+h2{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
 @keyframes animation1 {
     0% {
         transform: translatey(-2px);
