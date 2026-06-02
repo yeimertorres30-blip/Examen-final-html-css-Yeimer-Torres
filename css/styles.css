@@ -29,7 +29,6 @@ header {
 
 nav {
     border: 2px solid black;
-    position: sticky;
     top: 0;
     z-index: 9999;
 }
@@ -42,27 +41,22 @@ h2{
 @keyframes animation1 {
     0% {
         transform: translatey(-2px);
-        /* transform: translateX(1px); */
     }
 
     25% {
         transform: translateY(0);
-        /* transform: translateX(0); */
     }
 
     50% {
         transform: translateY(-2px);
-        /* transform: translateX(1px); */
     }
 
     75% {
         transform: translateY(0);
-        /* transform: translateX(0); */
     }
 
     100% {
         transform: translateY(-2px);
-        /* transform: translateX(1px); */
     }
 }
 
@@ -75,7 +69,7 @@ h2{
 h1 {
     display: flex;
     align-items: center;
-    /* gap: 10px; */
+    
     margin: 0;
     padding: 10px 0;
 }
@@ -156,9 +150,18 @@ h1 {
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+}
+.formulario{
+    background-color: white;
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 50px;
+    box-shadow: 0px 8px 20px 30px rgba(0, 0, 0, 0.2);
 }
 
 .formulario label {
@@ -180,7 +183,7 @@ h1 {
 .formulario input:focus,
 .formulario textarea:focus {
     border-color: green;
-    box-shadow: 0 0 10px rgba(0, 128, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.8);
 }
 
 .formulario button {
@@ -223,6 +226,13 @@ input[name="filtro"] {
 
 #todos:checked~.catalogo .producto {
     display: flex;
+}
+
+#bolsas:checked~.catalogo .producto,
+#cubiertos:checked~.catalogo .producto,
+#bucal:checked~.catalogo .producto,
+#kits:checked~.catalogo .producto{
+    display: none;
 }
 
 #botellas:checked~.catalogo .producto,
