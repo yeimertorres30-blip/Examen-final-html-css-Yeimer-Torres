@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="img/Logo.png">
+    <title>Suscribirme</title>
+</head>
+
+<body>
+    <header class="encabezado">
+        <h1><a href="index.html"><img src="img/Logo.png" alt="Logo" style="height: 100px; "></a> <span
+                class="color">Eco</span> -vida</h1>
+        <nav class="navegacion">
+            <a href="index.html" class="enlace">inicio</a>
+            <a href="nosotros.html" class="enlace">nosotros</a>
+            <a href="catalogo.html" class="enlace">catalogo</a>
+            <a href="promociones.html" class="enlace">promociones (tiempo limitado)</a>
+            <a href="blog.html" class="enlace">blog</a>
+            <a href="contacto.html" class="enlace">contacto</a>
+        </nav>
+    </header>
+    <section class="suscripttions">
+
+        <h2>Suscríbete a Eco-Vida Premium</h2>
+
+        <p>
+            Recibe promociones exclusivas y novedades sobre nuestros productos ecológicos.
+        </p>
+
+        <form class="form-suscripttions">
+
+            <div class="grupo">
+                <label>Nombre Completo</label>
+                <input type="text" id="nombre" placeholder="Ingresa tu nombre" required>
+            </div>
+
+            <div class="grupo">
+                <label>Correo Electrónico</label>
+                <input type="email" id="correo" placeholder="ejemplo@correo.com" pattern=".+@.+\..+" required>
+            </div>
+
+            <div class="grupo">
+                <label>Número de Tarjeta</label>
+                <input type="text" id="tarjeta" placeholder="1234123412341234" pattern="[0-9]{16}" maxlength="16"
+                    required>
+            </div>
+
+            <div class="grupo-check">
+                <input type="checkbox" id="privacidad" required>
+                <label>
+                    Acepto la política de privacidad y el tratamiento de datos.
+                </label>
+            </div>
+
+            <button type="submit">
+                Suscribirme
+            </button>
+
+        </form>
+
+    </section>
+</body>
+
+</html>

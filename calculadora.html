@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="img/Logo.png">
+    <title>Calculadora de Huella de Carbono</title>
+</head>
+
+<body>
+    <header class="encabezado">
+        <h1><a href="index.html"><img src="img/Logo.png" alt="Logo" style="height: 100px; "></a> <span
+                class="color">Eco</span> -vida</h1>
+        <nav class="navegacion">
+            <a href="index.html" class="enlace">inicio</a>
+            <a href="nosotros.html" class="enlace">nosotros</a>
+            <a href="catalogo.html" class="enlace">catalogo</a>
+            <a href="promociones.html" class="enlace">promociones (tiempo limitado)</a>
+            <a href="blog.html" class="enlace">blog</a>
+            <a href="contacto.html" class="enlace">contacto</a>
+        </nav>
+    </header>
+    <a href="suscribirme.html"><button class="button2">Suscribirme</button></a>
+
+    <section class="calculadora">
+
+        <h2>Calculadora de Huella de Carbono</h2>
+
+        <p class="descripcion">
+            Calcula tu impacto ambiental según el consumo energético de tu hogar y tus desplazamientos.
+        </p>
+
+        <input type="checkbox" id="mostrarResultado">
+
+        <form class="form-calculadora">
+
+            <div class="grupo">
+                <label for="energia">Consumo eléctrico mensual (kWh)</label>
+                <input type="number" id="energia" required>
+            </div>
+
+            <div class="grupo">
+                <label for="gas">Consumo mensual de gas (m³)</label>
+                <input type="number" id="gas" required>
+            </div>
+
+            <div class="grupo">
+                <label for="transporte">Medio de transporte principal</label>
+                <select id="transporte" required>
+                    <option disabled selected>Seleccionar</option>
+                    <option>Coche</option>
+                    <option>Transporte Público</option>
+                    <option>Bicicleta</option>
+                </select>
+            </div>
+
+            <div class="grupo">
+                <label for="km">Kilómetros recorridos por semana</label>
+                <input type="number" id="km" required>
+            </div>
+
+            <label for="mostrarResultado" class="btn-calcular">
+                Calcular Impacto
+            </label>
+
+        </form>
+
+        <div class="resultado">
+            <h3>Resultado</h3>
+            <p>
+                Tu huella de carbono es <strong>moderada</strong>.
+                Puedes reducirla utilizando más transporte público,
+                bicicleta y optimizando el consumo energético en tu hogar.
+            </p>
+        </div>
+
+    </section>
+</body>
+
+</html>
