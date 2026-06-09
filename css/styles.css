@@ -10,7 +10,6 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-image: url(../img/Logo.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
